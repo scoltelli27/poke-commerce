@@ -27,9 +27,8 @@ app.use("/assets", express.static("assets"));
 app.use("/images", express.static(path.resolve(__dirname, "assets/images")));
 app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+//Router
+app.use("/", require("./server/routes/router"));
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
