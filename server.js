@@ -23,10 +23,7 @@ app.set("view engine", "ejs");
 //app.set("views", path.resolve(__dirname, "views/ejs"));
 
 //Load assets
-app.use(
-  "/css/style.css",
-  express.static(path.resolve(__dirname, "assets/css"))
-);
+app.use("/assets", express.static("assets"));
 app.use("/images", express.static(path.resolve(__dirname, "assets/images")));
 app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 

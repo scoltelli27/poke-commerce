@@ -59,7 +59,7 @@
   /* Hero */
   .hero {
     min-height: calc(100vh - 60px);
-    background: url("images/hero-background.jpg") center/cover no-repeat;
+    background: url("/assets/images/hero-background.jpg") center/cover no-repeat;
     display: flex; /*Flex is used here to center the hero in the middle of the background*/
     align-items: center;
     justify-content: center;
