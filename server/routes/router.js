@@ -5,7 +5,7 @@ const controller = require("../controller/controller");
 route.get("/", services.homeRoutes);
 
 //API
-route.post("api/products", controller.create);
-route.get("api/products", controller.find);
-route.delete("api/products/:id", controller.delete);
+route.post("/api/products", controller.create);
+route.get("/api/products", controller.find);
+route.delete("/api/products/:id", controller.delete);
 module.exports = route;
