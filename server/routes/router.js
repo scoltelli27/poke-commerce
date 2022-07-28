@@ -7,5 +7,6 @@ route.get("/", services.homeRoutes);
 //API
 route.post("/api/products", controller.create);
 route.get("/api/products", controller.find);
+route.put("/api/products/:id", controller.update);
 route.delete("/api/products/:id", controller.delete);
 module.exports = route;
