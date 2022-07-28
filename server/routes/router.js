@@ -4,6 +4,7 @@ const services = require("../services/render");
 const controller = require("../controller/controller");
 route.get("/", services.homeRoutes);
 route.get("/add-product", services.add_product);
+route.get("/update-product", services.update_product);
 
 //API
 route.post("/api/products", controller.create);

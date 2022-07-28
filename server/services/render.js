@@ -15,3 +15,16 @@ exports.homeRoutes = (req, res) => {
 exports.add_product = (req, res) => {
   res.render("add_product");
 };
+
+exports.update_product = (req, res) => {
+  axios
+    .get("http://localhost:3000/api/products", {
+      params: { id: req.query.id },
+    })
+    .then(function (userdata) {
+      res.render("update_product", { product: userdata.data });
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+};
