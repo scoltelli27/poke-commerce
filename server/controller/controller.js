@@ -61,4 +61,21 @@ exports.update = (req, res) => {
 };
 
 //Delete product with product ID
-exports.delete = (req, res) => {};
+exports.delete = (req, res) => {
+  const id = req.params.id;
+  PokeDB.findByIdAndDelete(id)
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot delete with id: ${id}. Check for mistakes in the id.`,
+        });
+      } else {
+        res.send({ message: "Product was deleted successfully" });
+      }
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .send({ message: `Could not delete product with id: ${id}` });
+    });
+};
