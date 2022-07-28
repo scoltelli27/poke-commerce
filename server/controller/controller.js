@@ -18,7 +18,8 @@ exports.create = (req, res) => {
   product
     .save(product)
     .then((data) => {
-      res.send(data);
+      //res.send(data);
+      res.redirect("/add-product");
     })
     .catch((err) => {
       res.status(500).send({

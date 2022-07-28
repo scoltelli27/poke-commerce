@@ -11,3 +11,7 @@ exports.homeRoutes = (req, res) => {
       res.send(err);
     });
 };
+
+exports.add_product = (req, res) => {
+  res.render("add_product");
+};
