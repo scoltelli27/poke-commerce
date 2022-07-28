@@ -40,7 +40,25 @@ exports.find = (req, res) => {
 };
 
 //Update product
-exports.update = (req, res) => {};
+exports.update = (req, res) => {
+  if (!req.body) {
+    return res.status(400).send({ message: "Updated data cannot be empty" });
+  }
+  const id = req.params.id;
+  PokeDB.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    .then((data) => {
+      if (!data) {
+        res
+          .status(404)
+          .send({ message: `Cannot update the product with id: ${id}` });
+      } else {
+        res.send(data);
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({ message: "Error when updating product" });
+    });
+};
 
 //Delete product with product ID
 exports.delete = (req, res) => {};
