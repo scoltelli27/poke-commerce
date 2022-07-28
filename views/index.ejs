@@ -42,6 +42,7 @@
         <h2>Our Products</h2>
       </div>
       <div class="products-center">
+        <%for (let i=0; i<products.length;i++){%>
         <article class="product">
           <div class="img-container">
             <img
@@ -51,45 +52,11 @@
             />
             <button class="bag-btn" data-id="1">Add to basket</button>
           </div>
-          <h3>Card pack</h3>
-          <h4>$200</h4>
+          <h3><%=products[i].title%></h3>
+          <h4><%=products[i].price%></h4>
         </article>
-        <article class="product">
-          <div class="img-container">
-            <img
-              src="images/product-1.jpg"
-              alt="Pokemon Cards"
-              class="product-image"
-            />
-            <button class="bag-btn" data-id="1">Add to basket</button>
-          </div>
-          <h3>Card pack</h3>
-          <h4>$200</h4>
-        </article>
-        <article class="product">
-          <div class="img-container">
-            <img
-              src="images/product-1.jpg"
-              alt="Pokemon Cards"
-              class="product-image"
-            />
-            <button class="bag-btn" data-id="1">Add to basket</button>
-          </div>
-          <h3>Card pack</h3>
-          <h4>$200</h4>
-        </article>
-        <article class="product">
-          <div class="img-container">
-            <img
-              src="images/product-1.jpg"
-              alt="Pokemon Cards"
-              class="product-image"
-            />
-            <button class="bag-btn" data-id="1">Add to basket</button>
-          </div>
-          <h3>Card pack</h3>
-          <h4>$200</h4>
-        </article>
+        
+        <%}%>
       </div>
     </section>
     <!-- Products End -->
