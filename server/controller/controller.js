@@ -12,6 +12,7 @@ exports.create = (req, res) => {
   const product = new PokeDB({
     title: req.body.title,
     price: req.body.price,
+    imageurl: req.body.imageurl,
   });
 
   //Save user in DB
