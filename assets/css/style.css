@@ -221,6 +221,9 @@
     list-style-type: none;
   }
 
+  #logbutton {
+    cursor: pointer;
+  }
   .showBurger {
     transform: translateX(0%);
   }

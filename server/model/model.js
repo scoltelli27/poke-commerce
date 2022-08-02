@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
+// Pokemon products creation
 const pokeSchema = new Schema({
   title: String,
   price: Number,

@@ -9,6 +9,7 @@ const closeCart = document.querySelector(".close-cart");
 const bagBtn = document.querySelectorAll(".bag-btn");
 const burgerBtn = document.querySelector(".nav-icon");
 const burgerMenu = document.querySelector(".burger");
+const logBtn = document.getElementById("logbutton");
 
 //Show cart and overlay
 cartBtn.addEventListener("click", function () {
@@ -40,4 +41,9 @@ bagBtn.forEach((bagBtn) => {
 burgerBtn.addEventListener("click", function () {
   overlay.classList.toggle("hidden");
   burgerMenu.classList.add("showBurger");
+});
+
+//Log in button
+logBtn.addEventListener("click", function () {
+  location.href = "/add-product";
 });

@@ -15,7 +15,7 @@ exports.create = (req, res) => {
     imageurl: req.body.imageurl,
   });
 
-  //Save user in DB
+  //Save product in DB
   product
     .save(product)
     .then((data) => {
